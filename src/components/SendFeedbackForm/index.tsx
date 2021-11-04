@@ -2,6 +2,7 @@ import { useState, FormEvent, useEffect } from 'react';
 import { api } from '../../services/api';
 import styles from './styles.module.scss';
 import Select from 'react-select';
+import moment from 'moment';
 
 type User = {
   id: string;
@@ -46,17 +47,16 @@ export function SendFeedbackForm(props?: { match?: { params?: { id?: string } } 
 
   async function handleSendMessage(event: FormEvent) {
     event.preventDefault();
-    debugger
+    const date = moment().format('YYYY-MM-DD HH:mm:ss');
 
     let id = props?.match?.params?.id;
     if (typeof id === 'string') {
-      debugger
       await api.put('feedback', {
-        id: id, improvement: improvement, maintain: maintain, suggestion: suggestion, message: message
+        id: id, improvement: improvement, maintain: maintain, suggestion: suggestion, message: message, date: date
       })
     } else {
       await api.post('feedback', {
-        author, target, improvement, maintain, suggestion, message
+        author, target, improvement, maintain, suggestion, message, date
       }).then(response => {
         location.reload();
       })

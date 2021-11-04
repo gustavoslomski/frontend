@@ -27,7 +27,17 @@ type Feedback = {
   date: Date;
 }
 
-export function FeedbackRow({ id, author, target, improvement, maintain, suggestion, message }: Feedback) {
+export function FeedbackRow({ id, author, target, improvement, maintain, suggestion, message, date }: Feedback) {
+
+  function getDate() {
+    return new Intl.DateTimeFormat("pt-BR", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit"
+    }).format(new Date(date))
+  }
 
   return (
     <TableRow
@@ -42,6 +52,7 @@ export function FeedbackRow({ id, author, target, improvement, maintain, suggest
       <TableCell align="left">{maintain}</TableCell>
       <TableCell align="left">{suggestion}</TableCell>
       <TableCell align="left">{message}</TableCell>
+      <TableCell align="left">{getDate()}</TableCell>
       <TableCell align="left"><Link className={styles.editButton} to={{ pathname: "/feedback/" + id }}>Editar</Link></TableCell>
     </TableRow>
 

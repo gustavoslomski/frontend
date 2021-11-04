@@ -54,6 +54,7 @@ export function FeedbackList({ strict = true }) {
               <TableCell align="left">Pontos a melhorar</TableCell>
               <TableCell align="left">Sugestões</TableCell>
               <TableCell align="left">Feedback</TableCell>
+              <TableCell align="left">Última modificação</TableCell>
               <TableCell align="right"></TableCell>
             </TableRow>
           </TableHead>
