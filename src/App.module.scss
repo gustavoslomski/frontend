@@ -1,0 +1,93 @@
+.contentWrapper {
+  max-width: 1000vh;
+  height: 100vh;
+  column-gap: 120px;
+  position: relative;
+}
+.userCard {
+  background: #1b1b1f;
+  padding: 24px;
+  align-self: center;
+  max-width: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10%;
+
+  position: relative;
+}
+
+.signOutButton {
+  background: transparent;
+  border: 0;
+  color: #c4c4cc;
+  
+  position: absolute;
+  right: 24px;
+  top: 24px;
+
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}
+
+.userInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .userImage {
+    padding: 3px;
+    background: linear-gradient(100deg, #d81111 0.48%, #c1c1c1 100%);
+    border-radius: 50%;
+    line-height: 0;
+
+    img {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      border: 6px solid #121212;
+    }
+  }
+
+  .userGithub {
+    display: flex;
+    align-items: center;
+
+    margin-top: 8px;
+    color: #c4c4cc;
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+}
+
+.menuItem { 
+  list-style : none;
+  position : relative;
+  text-decoration: none;
+  padding: 10px;
+  color: #c4c4cc;
+
+  &:hover {
+    filter: brightness(0.9)
+  }
+}
+
+
+.menu {
+  text-decoration: none;
+  display : flex;
+  justify-content : space-around;
+  background-color : #1b1b1f;
+  color: #c4c4cc;
+  padding : 10px;
+  flex-direction : row;
+  border-radius: 3px;
+}

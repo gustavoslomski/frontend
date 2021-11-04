@@ -1,0 +1,65 @@
+.sendMessageForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  border-radius: 3px;
+  border: solid 0.2px;
+  margin-left: 30%;
+  max-width: 100vh;
+
+  label {
+    padding: 18px 24px 2px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  textarea {
+    background: #d2d2d2;
+    border-radius: 3px;
+    border: 0;
+    padding: 12px;
+    resize: none;
+    color: #000;
+    font-size: 16px;
+    line-height: 12px;
+    width: 90%;
+    margin-left: 24px;
+    height: 55px;
+
+    &:focus {
+      outline: 0;
+    }
+  
+  }
+
+  .selectUser {
+    font-size: 16px;
+    padding-left: 24px;
+    width: 60%;
+  }
+
+  button {
+    align-self: flex-end;
+    background: #1890ff;
+    cursor: pointer;
+    margin: 24px 40px 24px 24px;
+    padding: 0 32px;
+    height: 40px;
+    color: #fff;
+    border: 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      filter: brightness(0.9)
+    }
+  }
+}
